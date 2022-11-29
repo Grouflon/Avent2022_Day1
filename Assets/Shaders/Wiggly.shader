@@ -13,6 +13,7 @@ Shader "Unlit/Wiggly"
         Tags {"Queue"="Transparent" "IgnoreProjector"="True" "RenderType"="Transparent"}
         ZWrite Off
         Blend SrcAlpha OneMinusSrcAlpha
+        Cull Off
         LOD 100
 
         Pass

@@ -9,6 +9,8 @@ public class Game : MonoBehaviour
     public Mouth[] mouths;
     public Nose[] noses;
     public Eye[] eyes;
+    public Brow[] brows;
+    public Hat[] hats;
 
     public Mushroom draggedMushroom
     {
@@ -106,6 +108,11 @@ public class Game : MonoBehaviour
         m_face = Instantiate(facePrefab, Vector3.zero, Quaternion.identity);
         foreach (FaceSocket socket in m_face.sockets)
         {
+            foreach (Transform child in socket.transform)
+            {
+                GameObject.Destroy(child.gameObject);
+            }
+
             MonoBehaviour prefab = null;
             switch(socket.type)
             {
@@ -122,6 +129,16 @@ public class Game : MonoBehaviour
                 case FaceSocketType.Nose:
                 {
                     prefab = noses[Random.Range(0, noses.Length)];
+                }
+                break;
+                case FaceSocketType.Brow:
+                {
+                    prefab = brows[Random.Range(0, brows.Length)];
+                }
+                break;
+                case FaceSocketType.Hat:
+                {
+                    prefab = hats[Random.Range(0, hats.Length)];
                 }
                 break;
 

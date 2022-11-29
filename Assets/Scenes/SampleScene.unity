@@ -159,7 +159,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 2
-  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
+  m_BackGroundColor: {r: 0.92156863, g: 0.9098039, b: 0.8666667, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
@@ -415,14 +415,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   faces:
-  - {fileID: 442210366037926609, guid: 8a6b5962f5932fb46a598ae587132352, type: 3}
-  - {fileID: 442210366037926609, guid: 9b348d2bbdb93a442aef431ba1b2b588, type: 3}
+  - {fileID: 442210366037926609, guid: 404cc3fb57c90704d9d35d921fbbd6a5, type: 3}
   mouths:
-  - {fileID: 7627457099196741998, guid: 3713aa7bcd97e6e4194a40b13965299c, type: 3}
+  - {fileID: 7627457099196741998, guid: a43f843ea744e2b42b58285487f27daa, type: 3}
   noses:
-  - {fileID: 8898979859535486537, guid: e4e74475011efd1468dad7a4f86339b6, type: 3}
+  - {fileID: 8898979859535486537, guid: 0773b39f1a0db4c40924b4e00efe4f51, type: 3}
   eyes:
-  - {fileID: 2397920868836325809, guid: 5397078caead28e478d55553df560803, type: 3}
+  - {fileID: 2397920868836325809, guid: 3eb27dbb3ce7ab444a846f61e246fd73, type: 3}
+  - {fileID: 2397920868836325809, guid: 5465802ed0d31ee4dbb9697861e1bfab, type: 3}
+  - {fileID: 2397920868836325809, guid: 23b24acfeb3cd2c4aba14f5dbe2fc587, type: 3}
+  brows:
+  - {fileID: 4825142308791528296, guid: 701c8ce2d71bdd74db635910d72f17fa, type: 3}
+  hats:
+  - {fileID: 1610658111350471094, guid: a6642aadcc7bb9241b3269d7a20af4cb, type: 3}
 --- !u!4 &1473182141
 Transform:
   m_ObjectHideFlags: 0

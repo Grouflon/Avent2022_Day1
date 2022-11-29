@@ -22,7 +22,8 @@ public class Eye : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Vector3 pupilTargetPosition = pupilRange.transform.position;
+        Vector3 pupilCenter = pupilRange.transform.position + new Vector3(pupilRange.offset.x, pupilRange.offset.y, 0.0f);
+        Vector3 pupilTargetPosition = pupilCenter;
         if (m_game.draggedMushroom)
         {
             Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
@@ -32,10 +33,10 @@ public class Eye : MonoBehaviour
             Assert.IsTrue(result);
             Vector3 point = ray.GetPoint(enter);
 
-            Vector3 centerToPoint = point - pupilRange.transform.position;
+            Vector3 centerToPoint = point - pupilCenter;
             centerToPoint.z = 0.0f;
             float distanceRatio = Mathf.Min(centerToPoint.magnitude, maxLookAtRange) / maxLookAtRange;
-            pupilTargetPosition = pupilRange.transform.position + centerToPoint.normalized * distanceRatio * pupilRange.radius;
+            pupilTargetPosition = pupilCenter + centerToPoint.normalized * distanceRatio * pupilRange.radius;
         }
 
 	    pupil.transform.position = Vector3.Lerp(pupil.transform.position, pupilTargetPosition, (1.0f - Mathf.Pow(lookLerpRatio, Time.deltaTime)));
